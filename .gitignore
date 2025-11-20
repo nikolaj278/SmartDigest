@@ -77,6 +77,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+01-data gathering.ipynb
 
 # IPython
 profile_default/
@@ -214,3 +215,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Sessions 
+my_session.session
+*.session
