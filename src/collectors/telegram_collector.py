@@ -4,8 +4,8 @@ from emoji import replace_emoji
 
 from telethon.sync import TelegramClient
 
-from config.settings import SESSION_NAME, TG_API_ID, TG_API_HASH, EXCLUDE
-from storage.models import MessageItem
+from src.config.settings import SESSION_NAME, TG_API_ID, TG_API_HASH, EXCLUDE
+from src.storage.models import MessageItem
 
 class TelegramCollector:
 

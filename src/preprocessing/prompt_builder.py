@@ -1,4 +1,4 @@
-from config.settings import COMMAND_EN, COMMAND_RU
+from src.config.settings import COMMAND_EN, COMMAND_RU
 
 def build_the_prompt(msgs):
     """ Build a prompt of the command and texts and authors of messges. """

@@ -2,8 +2,8 @@ import asyncio
 
 from openai import OpenAI
 
-from config.settings import DS_API_KEY
-from preprocessing.prompt_builder import build_the_prompt
+from src.config.settings import DS_API_KEY
+from src.preprocessing.prompt_builder import build_the_prompt
 
 
 

@@ -2,7 +2,7 @@ import asyncio
 
 from telegram import Bot
 
-from config.settings import TG_BOT_TOKEN, TG_CHAT_ID
+from src.config.settings import TG_BOT_TOKEN, TG_CHAT_ID
 
 
 bot = Bot(token=TG_BOT_TOKEN)
