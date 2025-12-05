@@ -9,7 +9,9 @@ It is useful for a person who is using telegram and wants to choose spend their 
 To set up this service you need to copy the repo and use your own machine to get required secrete variables.
 
 1) Copy the repo. 
+\
 2) Go to the repo then to "settings" sections, on the left side bar find "Secretes and variables" then click "Actions". By clicking "New repository secrete" you can add all the secrete variables. Enter the variable name and its value. The names must not be changed or code will not work otherwise!
+\
 3) Get and fill in required secrete variables:
 
 - TG_API_ID, TG_API_HASH: follow the gide on  https://docs.telethon.dev/en/stable/basic/signing-in.html
@@ -17,7 +19,7 @@ To set up this service you need to copy the repo and use your own machine to get
 Run: 
 
 ```bash
-pip install python-telegram-bot telethon
+pip install python-telegram-bot telethon asyncio
 ```
 
 Run the code below. It will request the phone number of you telegram account. The string printed out will be the TG_SESSION value.
@@ -48,7 +50,7 @@ import requests
 TOKEN = TG_BOT_TOKEN
 url = f"https://api.telegram.org/bot{TOKEN}/getUpdates"
 resp = requests.get(url)
-print(resp.json()\['result'\]\[0\]\['message'\]\['chat'\]\['id'\])
+print(resp.json()['result'][0]['message']['chat']['id'])
 ```
 
 The number you will receive is the TG_CHAT_ID value.
@@ -58,9 +60,9 @@ Run:
 
 ```python
 dialogs = await client.get_dialogs()
-channels = \[d for d in dialogs if (type(d.entity).__name__ == "Channel")\]
+channels = [d for d in dialogs if (type(d.entity).__name__ == "Channel")]
 for ch in channels:
-    print("\{: <20\}\{\}".format(ch.id, ch.name))
+    print("{: <20}{}".format(ch.id, ch.name))
 ```
 
 You will see chat ids and names. Find the chats you would like to exclude from summarisation and add ids to EXCLUDE value (Minuses must be included!). if you have more then one such chat, then write separating them with comma, like: -123, -146, -198.
@@ -68,8 +70,7 @@ You will see chat ids and names. Find the chats you would like to exclude from s
 
 - DS_API_KEY:
 Go to https://platform.deepseek.com/profile and login. Top up and create an API key.
-
-
+\
 4) Check if everything works
 Run the service  manually:
 Got bak to the repository. Find "Actions" on the top bar. Click "SmartDigest Daily" on left side bar. Find "Run workflow" button. press and then press green "Run workflow" button. 
