@@ -9,9 +9,9 @@ It is useful for a person who is using telegram and wants to choose spend their 
 To set up this service you need to copy the repo and use your own machine to get required secrete variables.
 
 1) Copy the repo. 
-\
+
 2) Go to the repo then to "settings" sections, on the left side bar find "Secretes and variables" then click "Actions". By clicking "New repository secrete" you can add all the secrete variables. Enter the variable name and its value. The names must not be changed or code will not work otherwise!
-\
+
 3) Get and fill in required secrete variables:
 
 - TG_API_ID, TG_API_HASH: follow the gide on  https://docs.telethon.dev/en/stable/basic/signing-in.html
@@ -38,10 +38,9 @@ print(client.session.save())
 ```
 
 - TG_BOT_TOKEN:
-create bot using BotFather. You will receive bot token. 
-
+Go to Telegram and look for @BotFather. Issue the /newbot command and follow instructions. You will receive a bot token. Don't share it with anyone and treat it like a password!
 - TG_CHAT_ID:
-The bot will appear in your chat list. Send some message to it. Then go to  environment where you code in python and run:
+The bot will appear in your chat list. Send any message to it. Then go to  environment where you code in python and run:
 
 ```python
 import os
@@ -70,11 +69,11 @@ You will see chat ids and names. Find the chats you would like to exclude from s
 
 - DS_API_KEY:
 Go to https://platform.deepseek.com/profile and login. Top up and create an API key.
-\
+
 4) Check if everything works
 Run the service  manually:
-Got bak to the repository. Find "Actions" on the top bar. Click "SmartDigest Daily" on left side bar. Find "Run workflow" button. press and then press green "Run workflow" button. 
-If there were some new posts in telegram then you will receive their summarized versions in from the bot you created.
+Go back to the repository. Find "Actions" on the top bar. Then Click "SmartDigest Daily" on left side bar. Press "Run workflow" button and then press green "Run workflow" button. 
+If there were some new posts in telegram then you will receive their summarized versions  from the bot you created.
 
 
 ## Usage
