@@ -42,13 +42,13 @@ class TelegramCollector:
                                                       else "User nr." + str(m.sender_id),
                         author_id=m.sender_id,
                         text=m.text,
-                        language=detect(m.text),
+                        language=detect(m.text) if m.text is not "" else None,
                         date=m.date,
                         raw=m
                     )
                     for m in msgs
                     # skip empty or emoji only strings
-                    if (m.text is not None) and (replace_emoji(m.text, "") is not None)
+                    if (m.text is not None) and (replace_emoji(m.text, "") is not "")
                 ]
                 # if there are new messages containing text
                 if msg_objects:
