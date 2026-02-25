@@ -48,7 +48,7 @@ class TelegramCollector:
                     )
                     for m in msgs
                     # skip empty or emoji only strings
-                    if (m.text is not None) and (replace_emoji(m.text, "") is not "")
+                    if (m.text is not None) and (replace_emoji(m.text, "") != "")
                 ]
                 # if there are new messages containing text
                 if msg_objects:
