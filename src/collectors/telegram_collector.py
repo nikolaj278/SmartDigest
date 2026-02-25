@@ -1,3 +1,5 @@
+import re
+
 from langdetect import detect
 
 from emoji import replace_emoji
