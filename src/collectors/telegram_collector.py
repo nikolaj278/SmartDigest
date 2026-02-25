@@ -1,7 +1,5 @@
 import re
 
-from langdetect import detect
-
 from emoji import replace_emoji
 
 from telethon.sync import TelegramClient
@@ -44,7 +42,7 @@ class TelegramCollector:
                                                       else "User nr." + str(m.sender_id),
                         author_id=m.sender_id,
                         text=m.text,
-                        language=detect(m.text) if re.search(r"[^\W\d_]", m.text) else "en",
+                        language="ru" if re.search(r"[\u0400-\u04FF]", m.text) else "en",
                         date=m.date,
                         raw=m
                     )
