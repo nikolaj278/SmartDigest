@@ -42,7 +42,7 @@ class TelegramCollector:
                                                       else "User nr." + str(m.sender_id),
                         author_id=m.sender_id,
                         text=m.text,
-                        language=detect(m.text),
+                        language=detect(m.text) if re.search(r"[^\W\d_]", m.text) else "en",
                         date=m.date,
                         raw=m
                     )
