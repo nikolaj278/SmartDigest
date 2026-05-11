@@ -38,7 +38,7 @@ class TelegramCollector:
                         channel_name=ch.name,
                         channel_id=ch.id,
                         # use name if author has a name else "user nr. {sender_id}"
-                        author_name=m.sender.username if hasattr(m.sender, username)
+                        author_name=m.sender.username if hasattr(m.sender, "username")
                                                       else "User nr." + str(m.sender_id),
                         author_id=m.sender_id,
                         text=m.text,
